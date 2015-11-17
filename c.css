@@ -1,0 +1,150 @@
+*{margin:0;padding:0;}
+html{background: #eee;}
+html,body{-webkit-text-size-adjust: none;width:100%;height:100%;font-family: "微软雅黑","幼圆","Microsoft YaHei","YouYuan","Segoe UI Light","Helvetica Neue","Segoe UI","Segoe WP",sans-serif;color: #333;font-size:16px;background: white;}
+h1, h2, h3, h4, h5, h6 {font-family: "微软雅黑","幼圆","Microsoft YaHei","YouYuan","Segoe UI Light","Helvetica Neue","Segoe UI","Segoe WP",sans-serif;font-weight: 100;}
+img{max-width: 100%;border:0;height: auto;width: auto\9;}
+a{text-decoration:none;color:#004eff;}
+a:hover{text-decoration:underline;}
+.clear{clear:both;}
+.pull-right{float:right;}
+.pull-left{float:left;}
+
+#inputVideo,#inputCanvas{
+-webkit-transform: rotateY(180deg);
+-moz-transform: skew(0deg, 180deg) scale(-1, 1);
+-o-transform: skew(0deg, 180deg) scale(-1, 1);
+transform: rotateY(180deg);
+}
+/*
+* debug 上线的时候隐藏掉
+*/
+#debuginfo{
+position:absolute;
+right:0;
+z-index:999; 
+}
+
+#gaming{
+    display: none;
+    font-size: 30px;
+    color: red;
+}
+#canvasContainer
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    z-index: 1;
+}
+#welcome-page,#menu-page
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:1000;
+	background-color: white;
+}
+#menu-page
+{
+	z-index: 999; 
+}
+
+#small-dino
+{
+	position: absolute;
+	right:-1370px;
+	top:0px; 
+}
+#big-dino
+{
+	position: absolute;
+	left:-1370px;
+	top:0px;
+}
+#talk
+{
+	position: absolute;
+	top: -700px;
+	left: 0px;
+}
+/*
+* 诊断书
+*/
+#relcontainer{
+    width: 800px;
+    height: 600px;
+    margin:30px auto;
+    background-color: white;
+}
+#relcon{
+    width: 760px;
+    margin: 0 auto;
+    padding-top:20px ;
+    height: 100%;
+}
+#relcon p{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 111px;
+}
+#relleft{
+    width: 48%;
+    float: left;
+}
+#relright{
+    width: 48%;
+    float: right;
+}
+#progress{
+    width:0px;
+    height:10px;
+    margin:auto;
+    -webkit-border-radius: 10px;
+    background:white;
+    background:#9A9A9A;
+}
+
+#contrain{
+    margin-left: 80px;
+    width:800px;
+    height:50px;
+    padding:80px 0 0 80px;
+    display: none;
+}
+
+#advance{
+    width:900px;
+    position:relative;
+    top:-75px;
+}
+
+#pogimg{
+    width:80px;
+    position:relative;
+    right:65px;
+}
+
+#border{
+    height:10px;
+    -webkit-border-radius: 10px;
+    border:1px solid gray;
+/*  -webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;     */
+}
+#relbtn{
+    width: 80%;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+    color:black;
+    margin-top:20px;
+    cursor: pointer;
+}
+#relbtn:active{
+    background-color: black;
+    color: white;
+}
+

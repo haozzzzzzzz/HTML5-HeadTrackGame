@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>颈椎检测报告</title>
+    <link rel="stylesheet" href="c.css"/>
+    <script type="text/javascript" src="js/jq.js"></script>
+    <script type="text/javascript" src="js/ck.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var musicPlayer=document.getElementById('reportMusic');
+            var musicSrc;
+            var usrnum= getCookie("usrnum");
+            var allnum=getCookie("seednum");
+            var tem=((usrnum/allnum)*100).toFixed(2);
+            $("#relall").html(usrnum);
+            $("#rellevel").html(tem);
+            if(tem>=0&&tem<=33)
+            {
+                musicSrc="audio/l2.mp3";
+                $("#chenimg").attr("src","img/zd1.jpg");
+                $("#bzimg").attr("src","img/bz1.jpg");
+            }
+            else if(tem>33&&tem<=66)
+            {
+                musicSrc="audio/l1.mp3";
+                $("#chenimg").attr("src","img/zd2.jpg");
+                $("#bzimg").attr("src","img/bz2.jpg");
+            }
+            else if(tem>66)
+            {
+                musicSrc="audio/l4.mp3";
+                $("#chenimg").attr("src","img/zd3.jpg");
+                $("#bzimg").attr("src","img/bz3.jpg");
+            }
+            $("html,body").css({ background: "#DDD" });
+            $("#img").fadeTo(0,0.2);
+            $("#img").animate({left:"840px"});
+            $("#img").fadeTo("slow",1,function(){
+                musicPlayer.src=musicSrc;
+                musicPlayer.load();
+                musicPlayer.play();
+            });
+        });
+
+    </script>
+
+</head>
+<body style="overflow-x:hidden">
+<div id="relcontainer">
+    <div id="relcon">
+        <h3 style="text-align: center;font-size: 30px;">“甩你妹！”颈椎病检测小组</h3>
+        <h3 style="text-align: center;font-size: 30px;color:red;">诊&nbsp;&nbsp;&nbsp;断&nbsp;&nbsp;&nbsp;证&nbsp;&nbsp;&nbsp;明&nbsp;&nbsp;&nbsp;书</h3>
+        <hr>
+        <div id="relleft">
+            <p>您的颈椎准确完成了：<span id="relall" style="color:red;"></span>次运动</p>
+            <p>准确率：<span id="rellevel" style="color:red;">0</span>%</p>
+        </div>
+        <div id="relright">
+            <img src="" width="200" id ="bzimg" />
+        </div>
+        <div class="clear"></div>
+        <hr>
+        <p style="float: left;">陈医师诊断结果：</p><img id="chenimg" src="" width="200px" style="margin-top:45px;"/>
+        <img src="img/yz.png" width="200" id ="img" style="float: right;margin-top: 40px;position:absolute;left:1600px"/>
+    </div>
+</div>
+<audio id="reportMusic"></audio>
+</body>
+</html>

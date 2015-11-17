@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>甩你妹！</title>
+<link rel="stylesheet" href="c.css"/>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/headtrackr.js"></script>
+<script type="text/javascript" src="js/ck.js"></script>
+<script type="text/javascript" src="js/m2.js"></script>
+</head>
+<body>
+	<div id="welcome-page">
+		<img id="small-dino" src="img/small-dino.png"/>
+		<img id="big-dino" src="img/big-dino.png"/>
+		<img id="talk" src="img/talk.png">
+	</div>
+<!--Game canvas by luohao-->
+<div id="canvasContainer">
+	<canvas id="gameCanvas"></canvas>
+	<script type="text/javascript">
+
+	
+	</script>
+	<div id="contrain">
+		<div id="border">
+		</div>
+		<div id="advance">
+			<span id="progress"></span>
+			<img src="img/big-dino2.png" id="pogimg"></img>
+		</div>
+	</div>
+</div>
+<!----debug---->
+<div id="debuginfo">
+	<canvas id="inputCanvas" width="320" height="240"></canvas>
+	<video id="inputVideo" autoplay loop style="display:none;"></video>
+	<canvas id="debug" width="320" height="240" style="display: none;"></canvas>
+	<p id="status"></p>
+
+<!--gamecontainer-->
+<p id="gaming">游戏开始</p>
+<!--end gamecontainer-->
+	<button id="relbtn" onclick="myref();" >重新检测</button>
+</div>
+<!--end debug-->
+<!--游戏音乐-->
+<audio id="music_gaming" preload="auto">
+    <source src="audio/gaming.mp3" type="audio/mp3"/>
+</audio>
+ <audio id="welcomeMusic" preload="auto" loop="loop">
+     <source src="audio/welcome.mp3" type="audio/mp3"/>
+ </audio>
+<audio id="hitMusic" preload="auto">
+        <source src="audio/hit.ogg" type="audio/mp3"/>
+</audio>
+</body>
+</html>
